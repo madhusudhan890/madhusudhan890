@@ -73,7 +73,7 @@ I enjoy building systems that remain reliable under scale. My primary interests 
 
 ## Connect
 
-LinkedIn: linkedin.com/in/madhu-sudhan-rao-korivi
+LinkedIn: [linkedin.com/in/madhu-sudhan-rao-korivi](https://www.linkedin.com/in/madhu-sudhan-rao-korivi/)
 Email: [madhusudhankorivi890@gmail.com](mailto:madhusudhankorivi890@gmail.com)
 
 <!--
