@@ -21,6 +21,7 @@ Over the last 4 years, I have designed and built systems ranging from low-latenc
 * TypeScript
 * JavaScript
 * Python
+* React Js
 
 **Backend & Infrastructure**
 
