@@ -1,93 +1,108 @@
 # Madhu Sudhan Rao
 
-Senior Software Engineer specializing in distributed systems, real-time communication platforms, and high-performance backend infrastructure.
+Senior Software Engineer specializing in distributed systems, real-time communication platforms, and AI-native backend infrastructure.
 
-Over the last 4 years, I have designed and built systems ranging from low-latency P2P streaming platforms with WebRTC to scalable event-driven backend services handling real-time workloads. My work focuses on solving engineering challenges around concurrency, scalability, observability, and reliability.
+Over the last 4 years, I have designed and built systems ranging from low-latency media ingestion platforms with WebRTC to scalable event-driven backend services handling real-time workloads. More recently, I've been building AI-native backend systems — LangGraph agentic workflows, RAG pipelines with vector databases, and multi-provider LLM orchestration — alongside the real-time and event-driven infrastructure that connects them. My work focuses on solving engineering challenges around concurrency, scalability, observability, and reliability.
 
 ## Areas of Interest
 
-* Distributed Systems
-* Real-Time Communication
-* Event-Driven Architectures
-* High Performance Backend Engineering
-* Observability and Monitoring
-* Cloud Native Infrastructure
+- Distributed Systems
+- AI Agentic Workflows & RAG
+- Real-Time Communication
+- Event-Driven Architectures
+- High Performance Backend Engineering
+- Observability and Monitoring
+- Cloud Native Infrastructure
 
 ## Current Technology Stack
 
 **Languages**
 
-* Golang
-* TypeScript
-* JavaScript
-* Python
-* React Js
+- Golang
+- Python
+- TypeScript / JavaScript
+- SQL
+
+**AI & LLM**
+
+- LangChain / LangGraph (agentic workflows)
+- Retrieval-Augmented Generation (RAG)
+- ChromaDB / pgvector (vector databases)
+- OpenAI · Gemini · Groq · Anthropic APIs
+- Prompt Engineering & Multi-Provider Orchestration
+- Faster-Whisper (speech-to-text)
 
 **Backend & Infrastructure**
 
-* Kafka
-* Apache Flink
-* WebRTC
-* Docker
-* Kubernetes
-* NATS
+- FastAPI / Django
+- Express Js / Nest Js
+- net/http
+- Apache Kafka
+- Apache Flink
+- WebRTC (Pion)
+- gRPC
+- Docker / Kubernetes
+- NATS
 
 **Databases**
 
-* PostgreSQL
-* MySQL
-* MongoDB
-* DynamoDB
+- PostgreSQL
+- MySQL
+- MongoDB
+- DynamoDB
+- Redis
+
+**Cloud**
+
+- AWS S3
+- AWS DynamoDB
+- AWS Lambda / EC2
 
 **Observability**
 
-* OpenTelemetry
-* SigNoz
+- OpenTelemetry
+- SigNoz
+- Prometheus
 
 ## Featured Engineering Projects
 
-### Realtime P2P Streaming Platform
+### [Agentic AI Travel Planner — Multi-Agent LangGraph System](https://github.com/madhusudhan890/agentic-travel-planner).
 
-A low-latency communication platform built using Golang and WebRTC enabling direct peer-to-peer communication with signaling, NAT traversal, observability, and performance monitoring.
+A production-grade travel planning system built on LangGraph's StateGraph, orchestrating 7 specialist agents (flight, hotel, weather, budget, restaurant, visa, currency) in parallel via asyncio.gather, cutting end-to-end planning time from ~35s sequential to ~5s. Features an LLM-as-judge reviewer node that scores draft itineraries and loops back for revision below a quality threshold, a human-in-the-loop approval checkpoint using LangGraph's interrupt()/resume pattern, and a RAG layer (ChromaDB + Gemini embeddings) grounding the planner in a real travel knowledge base. Streams the entire multi-agent pipeline to the UI in real time via Server-Sent Events, with PDF generation and email delivery on completion.
 
-### Distributed Notification Platform
+### [Real-Time Media Intelligence Platform](https://github.com/madhusudhan890/media-intelligence-platform)
 
-A scalable event-driven notification service supporting Email, SMS, Push, and WhatsApp channels with Kafka-based processing, retries, dead-letter queues, scheduling, and rate limiting.
+A Go (Pion WebRTC) media server ingests audio/video frames from browser clients and publishes them to Kafka for downstream processing. Python AI workers run Faster-Whisper transcription and LangGraph-based multi-provider LLM inference (OpenAI, Gemini, Groq, Anthropic), streaming structured meeting insights back to a live dashboard via SSE. Built with Hexagonal Architecture, idempotent Kafka consumers, and end-to-end OpenTelemetry tracing.
 
-### OpenTelemetry Observability Stack
+### [ChatPDF — Production RAG Document Assistant](https://github.com/madhusudhan890/ChatPDF)
 
-End-to-end tracing, metrics, and logging implementation demonstrating distributed observability across microservices and asynchronous messaging systems.
+A fully async FastAPI RAG application using ChromaDB and pgvector for retrieval, with a provider-agnostic Factory Pattern supporting both Gemini and OpenAI for LLM inference and embeddings. Includes non-blocking PDF parsing, batch embedding generation, and exponential backoff retry handling — designed as a production system rather than a tutorial clone.
+
+### [Multi-Provider LLM Gateway](https://github.com/madhusudhan890/ai-base-project)
+
+A unified REST gateway that routes chat completion requests across multiple LLM providers (OpenAI, Gemini) using a Strategy/Handler pattern, enabling zero-downtime provider switching via configuration and easy extension to additional providers.
+
+### OpenTelemetry Observability SDK
+
+An internal SDK built on top of OpenTelemetry providing unified trace propagation, structured logging, and custom metrics across Go and Python microservices — integrated with SigNoz for distributed tracing and alerting.
 
 ## Engineering Philosophy
 
-I enjoy building systems that remain reliable under scale. My primary interests include reducing latency, improving throughput, designing fault-tolerant architectures, and creating observability-first platforms that are easy to operate and troubleshoot.
+I enjoy building systems that remain reliable under scale. My primary interests include reducing latency, improving throughput, designing fault-tolerant architectures, and creating observability-first platforms that are easy to operate and troubleshoot. Lately, that extends to making AI systems — agentic workflows, RAG pipelines, and LLM-integrated services — just as reliable and observable as the infrastructure they run on.
 
 ## Currently Exploring
 
-* Large Scale Distributed Systems
-* Streaming Data Platforms
-* Advanced Kafka Architectures
-* Apache Flink Internals
-* WebRTC Infrastructure
-* Platform Engineering
-* Cloud Native Architectures
+- Multi-Agent Systems & Agentic AI Workflows
+- Retrieval-Augmented Generation at Scale
+- Large Scale Distributed Systems
+- Streaming Data Platforms
+- Advanced Kafka Architectures
+- Apache Flink Internals
+- WebRTC Infrastructure
+- Platform Engineering
+- Cloud Native Architectures
 
 ## Connect
 
 LinkedIn: [linkedin.com/in/madhu-sudhan-rao-korivi](https://www.linkedin.com/in/madhu-sudhan-rao-korivi/)
-Email: [madhusudhankorivi890@gmail.com](mailto:madhusudhankorivi890@gmail.com)
-
-<!--
-**madhusudhan890/madhusudhan890** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.
-
-Here are some ideas to get you started:
-
-- 🔭 I’m currently working on ...
-- 🌱 I’m currently learning ...
-- 👯 I’m looking to collaborate on ...
-- 🤔 I’m looking for help with ...
-- 💬 Ask me about ...
-- 📫 How to reach me: ...
-- 😄 Pronouns: ...
-- ⚡ Fun fact: ...
--->
+Email: madhusudhankorivi890@gmail.com
